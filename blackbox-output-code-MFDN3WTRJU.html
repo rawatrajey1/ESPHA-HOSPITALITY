@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espha Hospitality Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Espha Hospitality Service</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#stock">Stock/Raw Goods</a></li>
+                <li><a href="#purchases">Purchases</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <p>Overview: Track your kitchen operations here.</p>
+            <div id="alerts">Alerts: Low stock on tomatoes.</div>
+        </section>
+
+        <section id="stock">
+            <h2>Stock/Raw Goods</h2>
+            <form id="add-stock">
+                <input type="text" placeholder="Item Name (e.g., Flour)" id="item-name" required>
+                <input type="number" placeholder="Quantity" id="quantity" required>
+                <button type="submit">Add Item</button>
+            </form>
+            <ul id="stock-list"></ul>
+        </section>
+
+        <section id="purchases">
+            <h2>Purchases</h2>
+            <form id="add-purchase">
+                <input type="text" placeholder="Supplier" id="supplier" required>
+                <input type="number" placeholder="Cost ($)" id="cost" required>
+                <button type="submit">Log Purchase</button>
+            </form>
+            <table id="purchase-table">
+                <thead>
+                    <tr><th>Supplier</th><th>Cost</th><th>Date</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section id="menu">
+            <h2>Menu</h2>
+            <form id="add-menu-item">
+                <input type="text" placeholder="Dish Name" id="dish-name" required>
+                <input type="number" placeholder="Price ($)" id="price" required>
+                <button type="submit">Add Dish</button>
+            </form>
+            <ul id="menu-list"></ul>
+        </section>
+
+        <section id="recipes">
+            <h2>Recipes</h2>
+            <form id="add-recipe">
+                <input type="text" placeholder="Recipe Name" id="recipe-name" required>
+                <textarea placeholder="Ingredients (e.g., 2 cups flour)" id="ingredients" required></textarea>
+                <textarea placeholder="Steps" id="steps" required></textarea>
+                <button type="submit">Add Recipe</button>
+            </form>
+            <div id="recipe-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Espha Hospitality Service</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
